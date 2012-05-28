@@ -208,7 +208,7 @@ function findOldIndexCurrent()
 	</div>
 
 	<? // Load saved playlists 
-	$query = "SELECT title FROM user_playlists WHERE user_id = " . $_SESSION['id'];
+	$query = "SELECT title FROM user_playlists WHERE user_id = " . $_SESSION['id'] . " ORDER BY title";
 	$result = mysql_query($query);?>
 	<form id="loadpl_form">
 	<select id="user_playlists">
